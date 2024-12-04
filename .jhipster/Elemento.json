@@ -1,0 +1,30 @@
+{
+  "annotations": {
+    "changelogDate": "20241031221312"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "elemento",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Elemento",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "elementoProyecto",
+      "relationshipName": "elementosProyectos",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}

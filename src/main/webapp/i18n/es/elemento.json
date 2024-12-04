@@ -1,0 +1,27 @@
+{
+  "ciecytApp": {
+    "elemento": {
+      "home": {
+        "title": "Elementos",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Elemento",
+        "createOrEditLabel": "Crear o editar Elemento",
+        "notFound": "Ningún Elementos encontrado"
+      },
+      "created": "Un nuevo Elemento ha sido creado con el identificador { param }",
+      "updated": "Un Elemento ha sido actualizado con el identificador { param }",
+      "deleted": "Un Elemento ha sido eliminado con el identificador { param }",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Elemento { id }?"
+      },
+      "detail": {
+        "title": "Elemento"
+      },
+      "id": "ID",
+      "elemento": "Elemento",
+      "descripcion": "Descripcion",
+      "elementosProyectos": "Elementos Proyectos",
+      "proyecto": "Proyecto"
+    }
+  }
+}

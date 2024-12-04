@@ -1,0 +1,26 @@
+{
+  "ciecytApp": {
+    "integrantesProyecto": {
+      "home": {
+        "title": "Integrantes Proyectos",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Integrantes Proyecto",
+        "createOrEditLabel": "Create or edit a Integrantes Proyecto",
+        "notFound": "No Integrantes Proyectos found"
+      },
+      "created": "A new Integrantes Proyecto is created with identifier { param }",
+      "updated": "A Integrantes Proyecto is updated with identifier { param }",
+      "deleted": "A Integrantes Proyecto is deleted with identifier { param }",
+      "delete": {
+        "question": "Are you sure you want to delete Integrantes Proyecto { id }?"
+      },
+      "detail": {
+        "title": "Integrantes Proyecto"
+      },
+      "id": "ID",
+      "nombre": "Nombre",
+      "descripcion": "Descripcion",
+      "proyecto": "Proyecto"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+entity Elemento {
+  elemento String required,
+  descripcion String
+}
+
+entity ElementoProyecto {
+  dato TextBlob,
+  descripcion String
+}
+
+entity IntegrantesProyecto {
+  nombre String required,
+  descripcion String
+}
+
+entity Proyecto {
+  nombre String required,
+  descripcion String
+}
+
+relationship OneToMany {
+  Elemento{elementosProyectos} to ElementoProyecto // Un Elemento (contenido global) tiene varios ElementoProyecto (partes específicas)
+  Proyecto{elementos} to Elemento // Un Proyecto tiene varios Elemento
+  Proyecto{integrantes} to IntegrantesProyecto // Un Proyecto tiene varios IntegrantesProyecto
+}
+
+dto Elemento, ElementoProyecto, IntegrantesProyecto, Proyecto with mapstruct
+paginate Elemento, ElementoProyecto, IntegrantesProyecto, Proyecto with pagination
+service Elemento, ElementoProyecto, IntegrantesProyecto, Proyecto with serviceImpl
+
+

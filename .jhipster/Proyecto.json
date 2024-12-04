@@ -1,0 +1,36 @@
+{
+  "annotations": {
+    "changelogDate": "20241031221315"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "descripcion",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Proyecto",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "elemento",
+      "relationshipName": "elementos",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "integrantesProyecto",
+      "relationshipName": "integrantes",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "searchEngine": "no",
+  "service": "serviceImpl"
+}
