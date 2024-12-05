@@ -136,7 +136,7 @@ export default defineComponent({
       const dataSend: any = {
         dato: form.dato,
         descripcion: form.descripcion,
-        elemento: elementos.value.find(item => item.id === 1101),
+        elemento: elementos.value.find(item => item.id === form.elemento),
       };
 
       if (elementoProyecto.value.id) {
