@@ -34,7 +34,7 @@
                     editor.setContent(v$.form.dato.$model);
                   });
                   editor.on('Change', () => {
-                    v$.form.dato.$model = editor.getContent();
+                    v$.form.dato.$model = updateContent(editor.getContent());
                   });
                 },
               }"

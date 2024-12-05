@@ -68,7 +68,7 @@ export default defineComponent({
         const res = await elementoProyectoService.find(elementoProyectoId);
         elementoProyecto.value = res;
 
-        form.dato = elementoProyecto.value.dato ?? '';
+        form.dato = updateContent(elementoProyecto.value.dato ?? '');
         form.descripcion = elementoProyecto.value.descripcion ?? '';
         form.elemento = elementoProyecto.value.elemento?.id ?? null as any;
       } catch (error: any) {
@@ -84,6 +84,22 @@ export default defineComponent({
       }
     };
 
+    const updateContent = (content: string) => {
+      const host = window.location.origin;
+
+      const updatedContent = content.replace(/<img src="(\.\.\/)+([^"]+)"/g, (match, p1, p2) => {
+        return `<img src="${host}/${p2}"`; // Reemplaza con el host actual
+      }).replace(/<img src="([^"]*?)\/api\//g, (match, p1) => {
+        // Si no hay un host válido antes de '/api', lo reemplaza
+        if (!p1.includes(host)) {
+          return `<img src="${host}/api/`;
+        }
+
+        return match; // Si hay un host válido, no se modifica
+      });
+
+      return updatedContent;
+    };
     const imageUpload = (blobInfo: any, progress: (percent: number) => void): Promise<string> => {
       return new Promise(async (resolve, reject) => {
         const formData = new FormData();
@@ -160,6 +176,7 @@ export default defineComponent({
       isSaving,
 
       previousState,
+      updateContent,
       imageUpload,
       save,
     };
